@@ -1,5 +1,5 @@
-const path=require("path");
-var pathObj=path.parse(__filename);
-
-console.log(pathObj);
-console.log(pathObj.ext);
+const fs=require("fs");
+fs.readdir('./',function(err,result){
+    if(err) console.log("eeror");
+    else console.log("files",result);
+});

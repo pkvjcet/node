@@ -1,5 +1,5 @@
 const fs=require("fs");
-fs.readdir('./',function(err,result){
-    if(err) console.log("eeror");
-    else console.log("files",result);
+fs.readFile('sample.txt','utf8',function(err,data){
+if(err) console.log(err);
+else console.log(data);
 });

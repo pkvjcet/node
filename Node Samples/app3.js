@@ -1,5 +1,11 @@
-const fs=require("fs");
-fs.readFile('sample.txt','utf8',function(err,data){
-if(err) console.log(err);
-else console.log(data);
-});
+
+const EventEmitter=require('events');
+var emitter=new EventEmitter; //object created
+//function definintion
+function myEventFunction(){
+    console.log("event occured");
+}
+//event binding
+emitter.on("myEvent",myEventFunction);
+//event firing
+emitter.emit('myEvent');

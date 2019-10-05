@@ -4,8 +4,11 @@ var emitter=new EventEmitter; //object created
 //function definintion
 
 //event binding
-emitter.on("myEvent",(a,b)=>{
-    console.log("event arg1="+a+"arg2="+b);
+emitter.on("myEvent",()=>{
+    console.log("first event occured");
+});
+emitter.on("myEvent",()=>{
+    console.log("second event occured");
 });
 //event firing
-emitter.emit('myEvent',1,"prince");
+emitter.emit('myEvent');
